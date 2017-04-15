@@ -14,9 +14,18 @@
     <link rel="stylesheet" type="text/css" href="index.css">
 </head>
 <body>
-<div class="contain">
-    <div class="inc-left">左边</div>
-    <div class="inc-right">右边</div>
-</div>
 </body>
+<script src="../libs/jquery/jquery.min.js"></script>
+<script>
+    $(function () {
+        console.log($(window).height());
+        $(window).resize(function () {
+            console.log($(this).height())
+        });
+        console.log($("body").height());
+        $("body").resize(function () {
+            console.log($(this).height())
+        })
+    })
+</script>
 </html>
